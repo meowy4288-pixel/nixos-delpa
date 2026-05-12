@@ -44,12 +44,12 @@ Right Shift push-to-talk voice assistant using Vosk (STT) + Piper (TTS). Named "
 - `lock` — xdg-screensaver lock
 - `screenshot` — ImageMagick import to ~/Pictures/
 
-## Delpa's Voice (~/opencode-voice/)
+## Delpa's Voice (`opencode-voice/` in repo)
 - **speakd.py** watches `msg.txt` for new content; writes to msg.txt to speak
 - Toggle: `voice-on` / `voice-off`
 - Start/stop: `voice-start` / `voice-stop`
-- Self-contained venv with piper-tts
-- Voice: `en_US-amy-medium.onnx`
+- Uses system `piper-tts` binary (nix-managed, no venv)
+- Voice: `en_US-amy-medium.onnx` (~60MB, tracked in repo)
 
 ## Session History
 ### 2026-05-11 Initial Session
@@ -75,3 +75,6 @@ Right Shift push-to-talk voice assistant using Vosk (STT) + Piper (TTS). Named "
 - Pushed to GitHub: `github.com/meowy4288-pixel/nixos-delpa`
 - Renamed from `-nixos-delpa` (leading dash removed)
 - Everything verified — 43 files tracked, none missing
+- Added `opencode-voice/` to repo (speakd daemon + voice model, stripped venv/runtime files)
+- Updated voice-start to use system python3 instead of venv
+- 3 commits now: "Delpa OS v1", "Update AGENTS.md", "Add opencode-voice/"
