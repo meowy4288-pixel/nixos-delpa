@@ -1,0 +1,32 @@
+copy
+paste
+browser
+stop
+scroll up
+scroll down
+sleep
+exit
+yes
+no
+search
+volume up
+volume down
+mute
+close tab
+new tab
+click
+screenshot
+lock
+enter
+escape
+tab
+youtube
+github
+gmail
+reddit
+maps
+terminal
+status
+memory
+update
+reset

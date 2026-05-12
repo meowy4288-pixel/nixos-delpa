@@ -1,0 +1,6 @@
+*.gguf
+*.bin
+*.wav
+__pycache__/
+*.pyc
+.env
