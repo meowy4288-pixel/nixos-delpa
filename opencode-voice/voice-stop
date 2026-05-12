@@ -1,0 +1,9 @@
+#!/bin/bash
+DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -f "$DIR/.speakd.pid" ]; then
+    kill "$(cat "$DIR/.speakd.pid")" 2>/dev/null
+    rm -f "$DIR/.speakd.pid"
+    echo "speakd stopped"
+else
+    echo "speakd not running"
+fi

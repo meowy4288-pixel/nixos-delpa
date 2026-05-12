@@ -1,0 +1,4 @@
+#!/bin/bash
+DIR="$(cd "$(dirname "$0")" && pwd)"
+rm -f "$DIR/.voice_enabled"
+echo "🔇 Voice OFF"

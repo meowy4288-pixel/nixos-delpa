@@ -1,0 +1,9 @@
+#!/bin/bash
+DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -f "$DIR/.speakd.pid" ] && kill -0 "$(cat "$DIR/.speakd.pid")" 2>/dev/null; then
+    echo "speakd already running (PID $(cat "$DIR/.speakd.pid"))"
+else
+    nohup python3 "$DIR/speakd.py" > /dev/null 2>&1 &
+    sleep 1
+    echo "speakd started (PID $(cat "$DIR/.speakd.pid"))"
+fi
