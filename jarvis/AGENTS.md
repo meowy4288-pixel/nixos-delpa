@@ -67,5 +67,11 @@ Right Shift push-to-talk voice assistant using Vosk (STT) + Piper (TTS). Named "
 - Cleaned old debug/test files from ~/jarvis/
 - Backups in ~/backups/jarvis/
 
-### Context requested 2026-05-12 10:47
-- User requested context save.
+### 2026-05-12 — NixOS Repo Created
+- Created `~/nixos-delpa/` repo with full NixOS config
+- `flake.nix` + `configuration.nix` for hostname `delpa-box`
+- Config: GNOME, PipeWire, networkmanager, user "you" with sudo
+- Systemd jarvis service in nix (uses python3.withPackages for deps)
+- Pushed to GitHub: `github.com/meowy4288-pixel/nixos-delpa`
+- Renamed from `-nixos-delpa` (leading dash removed)
+- Everything verified — 43 files tracked, none missing
