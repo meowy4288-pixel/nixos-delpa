@@ -80,3 +80,6 @@ Right Shift push-to-talk voice assistant using Vosk (STT) + Piper (TTS). Named "
 - 3 commits now: "Delpa OS v1", "Update AGENTS.md", "Add opencode-voice/"
 - Added `adguard/` dir (placeholder; config is root-owned, user must copy manually)
 - Added `services.adguardhome.enable = true;` to configuration.nix
+- Added ollama (with cuda), docker, touchegg, tlp services to nix config
+- Added user to docker group
+- Ollama models (qwen2.5-coder:1.5b, llama3.2, ~3GB) not tracked; re-download on install

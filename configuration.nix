@@ -19,7 +19,7 @@
   # ─── User ─────────────────────────────────────────────────
   users.users.you = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "input" "video" "networkmanager" ];
+    extraGroups = [ "wheel" "audio" "input" "video" "networkmanager" "docker" ];
     shell = pkgs.bash;
   };
 
@@ -27,6 +27,7 @@
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.touchegg.enable = true;
 
   # ─── Audio (PipeWire) ────────────────────────────────────
   services.pipewire = {
@@ -136,6 +137,18 @@
     enable = true;
     mutableSettings = true;
   };
+
+  # ─── Ollama (local LLM) ─────────────────────────────────
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
+
+  # ─── Docker ─────────────────────────────────────────────
+  virtualisation.docker.enable = true;
+
+  # ─── Power Management ───────────────────────────────────
+  services.tlp.enable = true;
 
   # ─── Security / Misc ────────────────────────────────────
   services.openssh.enable = true;
