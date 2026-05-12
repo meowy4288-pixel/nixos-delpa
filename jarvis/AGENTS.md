@@ -78,3 +78,5 @@ Right Shift push-to-talk voice assistant using Vosk (STT) + Piper (TTS). Named "
 - Added `opencode-voice/` to repo (speakd daemon + voice model, stripped venv/runtime files)
 - Updated voice-start to use system python3 instead of venv
 - 3 commits now: "Delpa OS v1", "Update AGENTS.md", "Add opencode-voice/"
+- Added `adguard/` dir (placeholder; config is root-owned, user must copy manually)
+- Added `services.adguardhome.enable = true;` to configuration.nix

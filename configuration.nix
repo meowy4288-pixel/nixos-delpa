@@ -131,6 +131,12 @@
     liberation_ttf
   ];
 
+  # ─── AdGuard Home (network-level adblocker) ────────────
+  services.adguardhome = {
+    enable = true;
+    mutableSettings = true;
+  };
+
   # ─── Security / Misc ────────────────────────────────────
   services.openssh.enable = true;
   programs.mtr.enable = true;
